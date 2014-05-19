@@ -14,7 +14,7 @@ feature "Accounts" do
 
     page.should have_content "Signed in as subscribem@example.com"
     page.should have_content "Your account has been successfully created."
-    page.current_url.should == "http://test.example.com/subscribem/"
+    page.current_url.should == "http://test.example.com/"
   end
 
   scenario 'Ensure subdomain uniqueness' do
@@ -29,7 +29,7 @@ feature "Accounts" do
     fill_in 'Password confirmation', :with => 'password'
     click_button 'Create Account'
 
-    page.current_url.should == 'http://www.example.com/subscribem/accounts'
+    page.current_url.should == 'http://www.example.com/accounts'
     page.should have_content('Sorry, your account could not be created.')
     page.should have_content('Subdomain has already been taken')
   end
@@ -43,7 +43,7 @@ feature "Accounts" do
     fill_in "Password", :with => "password"
     fill_in "Password confirmation", :with => "password"
     click_button "Create Account"
-    page.current_url.should == "http://www.example.com/subscribem/accounts"
+    page.current_url.should == "http://www.example.com/accounts"
     page.should have_content("Sorry, your account could not be created.")
     page.should have_content("Subdomain is not allowed. Please choose another subdomain.")
   end

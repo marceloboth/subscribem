@@ -18,9 +18,9 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.0.0"
 
   s.add_development_dependency "sqlite3"
-
   s.add_development_dependency 'rspec-rails', '2.14.0'
   s.add_development_dependency 'capybara', '2.1.0'
+  s.add_development_dependency "factory_girl", "4.1.0"
 
   s.add_dependency "bcrypt-ruby", "3.1.2"
   s.add_dependency "warden", "1.2.3"
